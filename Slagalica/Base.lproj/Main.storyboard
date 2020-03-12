@@ -1,24 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3LK-WO-jPO">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="sQC-0A-FsM">
+            <objects>
+                <navigationController id="3LK-WO-jPO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mxg-YU-NzG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9DU-FL-o2V" kind="relationship" relationship="rootViewController" id="ZoH-FC-ySa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viI-Lj-IaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1506" y="134"/>
+        </scene>
+        <!--Tasks View Controller-->
+        <scene sceneID="E1f-ne-KpA">
+            <objects>
+                <viewController storyboardIdentifier="AITasksViewController" id="9DU-FL-o2V" customClass="AITasksViewController" customModule="Slagalica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KNg-i7-jhM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="RSO-GG-7ud">
+                                <rect key="frame" x="136" y="366" width="142" height="164"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw5-Ki-YSC">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <state key="normal" title="Puzzle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="puzzleButtonTapped:" destination="9DU-FL-o2V" eventType="touchUpInside" id="C1X-De-hRB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EP6-hB-TZy">
+                                        <rect key="frame" x="0.0" y="116" width="142" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <state key="normal" title="Ant colony">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="antColonyButtonTapped:" destination="9DU-FL-o2V" eventType="touchUpInside" id="9SP-F2-S5d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RSO-GG-7ud" firstAttribute="centerY" secondItem="KNg-i7-jhM" secondAttribute="centerY" id="E9p-gI-D3P"/>
+                            <constraint firstItem="RSO-GG-7ud" firstAttribute="centerX" secondItem="KNg-i7-jhM" secondAttribute="centerX" id="kez-kB-2Qf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QqW-GV-xQD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B4c-H0-768"/>
+                    <connections>
+                        <outlet property="antColonyButton" destination="EP6-hB-TZy" id="fFb-VD-4jh"/>
+                        <outlet property="puzzleButton" destination="Zw5-Ki-YSC" id="wSk-6W-ScQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nit-4f-LxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797" y="136"/>
+        </scene>
+        <!--Ant Colony View Controller-->
+        <scene sceneID="HOc-LC-rRf">
+            <objects>
+                <viewController storyboardIdentifier="AntColonyViewController" id="9US-fQ-CIH" customClass="AntColonyViewController" customModule="Slagalica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jnr-t1-NE9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUe-c6-Vx2" customClass="PointsView" customModule="Slagalica" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-JW-WHD">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abT-Qa-Ba3">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Undo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoTapped:" destination="9US-fQ-CIH" eventType="touchUpInside" id="nQA-qv-dmc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1W-UH-abD">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startTapped:" destination="9US-fQ-CIH" eventType="touchUpInside" id="pJW-z2-4qJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DlI-9e-wsQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kq1-JW-WHD" firstAttribute="top" secondItem="QUe-c6-Vx2" secondAttribute="bottom" id="0ws-Q7-9qi"/>
+                            <constraint firstItem="ekY-KD-yYE" firstAttribute="trailing" secondItem="QUe-c6-Vx2" secondAttribute="trailing" id="7i5-c9-2br"/>
+                            <constraint firstItem="kq1-JW-WHD" firstAttribute="leading" secondItem="ekY-KD-yYE" secondAttribute="leading" id="KVr-v8-omj"/>
+                            <constraint firstItem="QUe-c6-Vx2" firstAttribute="top" secondItem="ekY-KD-yYE" secondAttribute="top" id="XlX-Po-J0r"/>
+                            <constraint firstItem="ekY-KD-yYE" firstAttribute="bottom" secondItem="kq1-JW-WHD" secondAttribute="bottom" id="dQo-YO-bx3"/>
+                            <constraint firstItem="QUe-c6-Vx2" firstAttribute="leading" secondItem="ekY-KD-yYE" secondAttribute="leading" id="fBn-YR-8Vk"/>
+                            <constraint firstItem="ekY-KD-yYE" firstAttribute="trailing" secondItem="kq1-JW-WHD" secondAttribute="trailing" id="kKx-7y-YHB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ekY-KD-yYE"/>
+                    </view>
+                    <connections>
+                        <outlet property="pointsView" destination="QUe-c6-Vx2" id="7o6-hG-Md5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMN-Xg-vh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="465"/>
+        </scene>
+        <!--Puzzle View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PuzzleViewController" id="BYZ-38-t0r" customClass="PuzzleViewController" customModule="Slagalica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-Rj-cDS" customClass="PuzzleView" customModule="Slagalica" customModuleProvider="target">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Rfv-0g-UKd"/>
+                                    <constraint firstAttribute="width" constant="240" id="Vzw-rX-Ot2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCe-k4-KgF">
+                                <rect key="frame" x="20" y="668" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZtB-jw-4ff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Solve"/>
+                                <connections>
+                                    <action selector="didTapSolveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAw-as-3Ql"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZCe-k4-KgF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ClC-YS-tWA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZCe-k4-KgF" secondAttribute="trailing" constant="20" id="JI3-FS-p9M"/>
+                            <constraint firstItem="TSP-Rj-cDS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LGv-Gy-Jam"/>
+                            <constraint firstItem="TSP-Rj-cDS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddm-w0-Yjf"/>
+                            <constraint firstItem="ZCe-k4-KgF" firstAttribute="top" secondItem="TSP-Rj-cDS" secondAttribute="bottom" constant="100" id="mdO-8G-Nho"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="puzzleView" destination="TSP-Rj-cDS" id="jMV-gB-SfD"/>
+                        <outlet property="solveButton" destination="ZCe-k4-KgF" id="2zL-56-F6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="114" y="-237"/>
         </scene>
     </scenes>
 </document>

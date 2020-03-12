@@ -10,21 +10,26 @@ import UIKit
 
 class AITasksViewController: UIViewController {
 
+    @IBOutlet weak var puzzleButton: UIButton!
+    @IBOutlet weak var antColonyButton: UIButton!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func puzzleButtonTapped(_ sender: UIButton) {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PuzzleViewController") as? PuzzleViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func antColonyButtonTapped(_ sender: UIButton) {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AntColonyViewController") as? AntColonyViewController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
-    */
-
+    
 }

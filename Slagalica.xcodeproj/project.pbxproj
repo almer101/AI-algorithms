@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		4012069722FC1ACB00162A7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012069622FC1ACB00162A7C /* AppDelegate.swift */; };
-		4012069922FC1ACB00162A7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012069822FC1ACB00162A7C /* ViewController.swift */; };
+		4012069922FC1ACB00162A7C /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012069822FC1ACB00162A7C /* PuzzleViewController.swift */; };
 		4012069C22FC1ACB00162A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4012069A22FC1ACB00162A7C /* Main.storyboard */; };
 		4012069E22FC1ACC00162A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4012069D22FC1ACC00162A7C /* Assets.xcassets */; };
 		401206A122FC1ACC00162A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4012069F22FC1ACC00162A7C /* LaunchScreen.storyboard */; };
+		401206A922FC1B1100162A7C /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401206A822FC1B1100162A7C /* TileView.swift */; };
+		401206AB22FC217A00162A7C /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401206AA22FC217A00162A7C /* PuzzleView.swift */; };
+		4051408E2301593A00C0EC0D /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4051408D2301593A00C0EC0D /* State.swift */; };
+		408732CA2302A69400E6D272 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408732C92302A69400E6D272 /* SearchViewController.swift */; };
+		408732CE2302E10800E6D272 /* AntColonyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408732CD2302E10800E6D272 /* AntColonyViewController.swift */; };
+		408732D02302E12E00E6D272 /* AITasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408732CF2302E12E00E6D272 /* AITasksViewController.swift */; };
+		408732D22302EBBD00E6D272 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408732D12302EBBD00E6D272 /* PointsView.swift */; };
+		408732D42303FF7C00E6D272 /* Ant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408732D32303FF7C00E6D272 /* Ant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4012069322FC1ACB00162A7C /* Slagalica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slagalica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4012069622FC1ACB00162A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4012069822FC1ACB00162A7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4012069822FC1ACB00162A7C /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		4012069B22FC1ACB00162A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4012069D22FC1ACC00162A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		401206A022FC1ACC00162A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		401206A222FC1ACC00162A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		401206A822FC1B1100162A7C /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		401206AA22FC217A00162A7C /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
+		4051408D2301593A00C0EC0D /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		408732C92302A69400E6D272 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		408732CD2302E10800E6D272 /* AntColonyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntColonyViewController.swift; sourceTree = "<group>"; };
+		408732CF2302E12E00E6D272 /* AITasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITasksViewController.swift; sourceTree = "<group>"; };
+		408732D12302EBBD00E6D272 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		408732D32303FF7C00E6D272 /* Ant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +71,37 @@
 			isa = PBXGroup;
 			children = (
 				4012069622FC1ACB00162A7C /* AppDelegate.swift */,
-				4012069822FC1ACB00162A7C /* ViewController.swift */,
 				4012069A22FC1ACB00162A7C /* Main.storyboard */,
+				408732CF2302E12E00E6D272 /* AITasksViewController.swift */,
+				408732CC2302E0E900E6D272 /* Ant colony */,
+				408732CB2302E0E400E6D272 /* Puzzle */,
 				4012069D22FC1ACC00162A7C /* Assets.xcassets */,
 				4012069F22FC1ACC00162A7C /* LaunchScreen.storyboard */,
 				401206A222FC1ACC00162A7C /* Info.plist */,
 			);
 			path = Slagalica;
+			sourceTree = "<group>";
+		};
+		408732CB2302E0E400E6D272 /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				4012069822FC1ACB00162A7C /* PuzzleViewController.swift */,
+				408732C92302A69400E6D272 /* SearchViewController.swift */,
+				401206AA22FC217A00162A7C /* PuzzleView.swift */,
+				401206A822FC1B1100162A7C /* TileView.swift */,
+				4051408D2301593A00C0EC0D /* State.swift */,
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
+		408732CC2302E0E900E6D272 /* Ant colony */ = {
+			isa = PBXGroup;
+			children = (
+				408732CD2302E10800E6D272 /* AntColonyViewController.swift */,
+				408732D12302EBBD00E6D272 /* PointsView.swift */,
+				408732D32303FF7C00E6D272 /* Ant.swift */,
+			);
+			path = "Ant colony";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4012069922FC1ACB00162A7C /* ViewController.swift in Sources */,
+				408732CE2302E10800E6D272 /* AntColonyViewController.swift in Sources */,
+				408732CA2302A69400E6D272 /* SearchViewController.swift in Sources */,
+				408732D22302EBBD00E6D272 /* PointsView.swift in Sources */,
+				408732D42303FF7C00E6D272 /* Ant.swift in Sources */,
+				401206AB22FC217A00162A7C /* PuzzleView.swift in Sources */,
+				4012069922FC1ACB00162A7C /* PuzzleViewController.swift in Sources */,
+				401206A922FC1B1100162A7C /* TileView.swift in Sources */,
+				408732D02302E12E00E6D272 /* AITasksViewController.swift in Sources */,
+				4051408E2301593A00C0EC0D /* State.swift in Sources */,
 				4012069722FC1ACB00162A7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
